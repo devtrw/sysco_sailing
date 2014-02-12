@@ -1,12 +1,15 @@
-== SyscoSailing
+== SyscoSailing {<img src="https://codeclimate.com/github/devtrw/sysco_sailing.png">}[https://codeclimate.com/github/devtrw/sysco_sailing]
 
 The new site/app for syscosailing.org
 
-Code Quality: {<img src="https://codeclimate.com/github/devtrw/sysco_sailing.png"
-/>}[https://codeclimate.com/github/devtrw/sysco_sailing]
 
+=== Contributing
 
-Docs TODO:
+{Ruby Style Guide}[https://github.com/bbatsov/ruby-style-guide]
+
+{Rails Style Guide}[https://github.com/bbatsov/rails-style-guide]
+
+=== Docs TODO
 
 * Ruby version
 
