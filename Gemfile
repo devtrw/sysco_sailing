@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Slim templating instead of erb
 gem 'slim-rails'
 
+# Devise for auth
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
