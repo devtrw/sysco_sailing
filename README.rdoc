@@ -1,9 +1,12 @@
-== README
+== SyscoSailing
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The new site/app for syscosailing.org
 
-Things you may want to cover:
+Code Quality: {<img src="https://codeclimate.com/github/devtrw/sysco_sailing.png"
+/>}[https://codeclimate.com/github/devtrw/sysco_sailing]
+
+
+Docs TODO:
 
 * Ruby version
 
@@ -23,6 +26,3 @@ Things you may want to cover:
 
 * ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
