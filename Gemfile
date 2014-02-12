@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# Sass mixins/extension
+gem "compass-rails"
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -32,6 +35,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Better/More Useful error pages
 gem 'better_errors', group: [:development, :test]
 
 # Use ActiveModel has_secure_password
