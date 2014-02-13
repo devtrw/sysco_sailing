@@ -2,6 +2,11 @@
 
 The new site/app for syscosailing.org
 
+=== Setup Dev Environment
+
+1 . clone repo
+
+2. rake db:migrate
 
 === Contributing
 
