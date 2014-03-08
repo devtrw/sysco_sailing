@@ -1,11 +1,19 @@
 SyscoSailing::Application.routes.draw do
-  devise_for :users
+
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+
+
+  as :user do
+    patch '/user/confirmation' => 'users/confirmations#update',
+          via: :patch,
+          as:  :update_user_confirmation
+  end
+  devise_for :users, controllers: { confirmations: 'users/confirmations' }
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

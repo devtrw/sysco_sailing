@@ -33,4 +33,7 @@ SyscoSailing::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # not so secret key for testing
+  config.secret_key_base = 'not-a-secret'
 end

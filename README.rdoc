@@ -1,13 +1,22 @@
-== SyscoSailing {<img src="https://codeclimate.com/github/devtrw/sysco_sailing.png">}[https://codeclimate.com/github/devtrw/sysco_sailing] {<img src="https://www.versioneye.com/ruby/jbuilder/1.5.3/badge.png" alt="Dependency Status" />}[https://www.versioneye.com/ruby/jbuilder/1.5.3]
+== SyscoSailing {<img src="https://travis-ci.org/devtrw/sysco_sailing.png?branch=feature/signup-flow" alt="Build Status" />}[https://travis-ci.org/devtrw/sysco_sailing] {<img src="https://codeclimate.com/github/devtrw/sysco_sailing.png">}[https://codeclimate.com/github/devtrw/sysco_sailing] {<img src="https://www.versioneye.com/ruby/jbuilder/1.5.3/badge.png" alt="Dependency Status" />}[https://www.versioneye.com/ruby/jbuilder/1.5.3]
 
 The new site/app for syscosailing.org
 
+=== Setup Dev Environment
+
+1 . clone repo
+
+2. rake db:migrate
 
 === Contributing
 
 {Ruby Style Guide}[https://github.com/bbatsov/ruby-style-guide]
 
 {Rails Style Guide}[https://github.com/bbatsov/rails-style-guide]
+
+=== Project Status/Management
+
+{Sysco Sailing JIRA}[https://devtrw.atlassian.net/browse/SS}
 
 === Docs TODO
 
