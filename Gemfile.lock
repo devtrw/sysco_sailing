@@ -150,6 +150,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   rails (= 4.0.2)
+  rake
   sass-rails (~> 4.0.0)
   sdoc
   slim-rails

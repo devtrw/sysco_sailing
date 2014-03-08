@@ -16,7 +16,7 @@ gem 'devise'
 gem 'sass-rails', '~> 4.0.0'
 
 # Sass mixins/extension
-gem "compass-rails"
+gem 'compass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -47,6 +47,11 @@ gem 'better_errors', group: [:development, :test]
 # error inspection within better errors
 gem 'binding_of_caller', group: [:development, :test]
 
+# Use debugger
+gem 'debugger', group: [:development, :test]
+
+gem 'rake', group: [:test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -55,6 +60,3 @@ gem 'binding_of_caller', group: [:development, :test]
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
