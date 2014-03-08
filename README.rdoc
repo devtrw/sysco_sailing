@@ -14,6 +14,10 @@ The new site/app for syscosailing.org
 
 {Rails Style Guide}[https://github.com/bbatsov/rails-style-guide]
 
+=== Project Status/Management
+
+{Sysco Sailing JIRA}[https://devtrw.atlassian.net/browse/SS}
+
 === Docs TODO
 
 * Ruby version
