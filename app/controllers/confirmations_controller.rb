@@ -20,7 +20,7 @@ class ConfirmationsController < Devise::ConfirmationsController
       end
     end
 
-    if !@confirmable.errors.empty?
+    unless @confirmable.errors.empty?
       render 'devise/confirmations/new' #Change this if you don't have the views on default path
     end
   end
@@ -34,7 +34,7 @@ class ConfirmationsController < Devise::ConfirmationsController
         do_confirm
       end
     end
-    if !@confirmable.errors.empty?
+    unless @confirmable.errors.empty?
       self.resource = @confirmable
       render 'devise/confirmations/new' #Change this if you don't have the views on default path
     end
@@ -46,8 +46,8 @@ class ConfirmationsController < Devise::ConfirmationsController
     original_token = params[:confirmation_token]
     confirmation_token = Devise.token_generator.digest(User, :confirmation_token, original_token)
     @confirmable = User.find_or_initialize_with_error_by(:confirmation_token, confirmation_token)
-    if !@confirmable.new_record?
-      @confirmable.only_if_unconfirmed {yield}
+    unless @confirmable.new_record?
+      @confirmable.only_if_unconfirmed { yield }
     end
   end
 

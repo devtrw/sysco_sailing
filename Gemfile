@@ -44,6 +44,9 @@ end
 # Better/More Useful error pages
 gem 'better_errors', group: [:development, :test]
 
+# error inspection within better errors
+gem 'binding_of_caller', group: [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
