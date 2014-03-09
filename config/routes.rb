@@ -1,5 +1,11 @@
 SyscoSailing::Application.routes.draw do
 
+  get '/privacy' => 'high_voltage/pages#show', id: 'privacy'
+  get '/terms'   => 'high_voltage/pages#show', id: 'terms'
+
+  get '/home',  to: redirect('/')
+  get '/index', to: redirect('/')
+
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
