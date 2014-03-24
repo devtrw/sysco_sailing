@@ -30,11 +30,11 @@ module ApplicationHelper
   end
 
   # Returns the full title on a per-page basis.
-  def full_title(page_title)
+  def full_title(page_title, with_sitename = true)
     if page_title.empty?
       site_name
     else
-      "#{page_title} | #{site_name}"
+      with_sitename ? "#{page_title} | #{site_name}" : page_title
     end
   end
 end

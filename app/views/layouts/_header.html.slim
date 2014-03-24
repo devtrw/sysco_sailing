@@ -21,27 +21,114 @@ div.header
           span.icon-bar
         = link_to 'Small Yacht Sailing Club of Oregon', site_url, class: 'navbar-brand'
       div.collapse.navbar-collapse.navbar-responsive-collapse
-        ul.nav.navbar-nav.navbar-right
-          li.active: a href="#" Home
-          li: a href="#about" About
-          li: a href="#contact" Contact
-          li.dropdown
-            a.dropdown-toggle href="#" data-toggle="dropdown"
-              | Dropdown
-              b.caret
-            ul.dropdown-menu
-              li: a href="#" Action
-              li: a href="#" Another action
-              li: a href="#" Something else here
-              li.divider
-              li.dropdown-header Nav header
-              li: a href="#" Separated link
-              li: a href="#" One more separated link
+        = render_navigation expand_all: true, renderer: :bootstrap
+      /  ul.nav.navbar-nav.navbar-right
+      /    li.active: a href="#" Home
+      /    li: a href="#about" About
+      /    li: a href="#contact" Contact
+      /    li.dropdown
+      /      a.dropdown-toggle href="#" data-toggle="dropdown"
+      /        | Dropdown
+      /        b.caret
+      /      ul.dropdown-menu
+      /        li: a href="#" Action
+      /        li: a href="#" Another action
+      /        li: a href="#" Something else here
+      /        li.divider
+      /        li.dropdown-header Nav header
+      /        li: a href="#" Separated link
+      /        li: a href="#" One more separated link
 
-div.breadcrumbs.margin-bottom-40
-  div.container
-    h1.pull-left = full_title(yield(:title))
-    ul.pull-right.breadcrumb
-      li: a href="#" Home
-      li: a href="#" Pages
-      li.active Login
+- unless current_page?('/')
+  div.breadcrumbs.margin-bottom-40
+    div.container
+      h1.pull-left = full_title(yield(:title), false)
+      ul.pull-right.breadcrumb
+        = render_navigation renderer: :breadcrumbs, join_with: ' / '
+        /li: a href="#" Home
+        /li: a href="#" Pages
+        /li.active Login
+- else
+  css:
+    #da-slider {
+      background-image: url(#{cms_snippet_content(:homepage_slider_image)})
+    }
+    .da-slide h2 {
+      text-shadow: rgba(0, 0, 0, 0.62) 1px 1px 1px;
+      margin-left: 7.5%;
+    }
+    .da-slide h2 {
+      top: 15px;
+    }
+    .da-slide h2 + h2 {
+      top: 82px;
+      line-height: .8em;
+    }
+    .da-slide h2 i {
+      width: 1049px;
+      display: inline-block;
+      text-shadow: rgba(0, 0, 0, 0.25) 1px 1px 1px;
+    }
+  .slider-inner
+    #da-slider.da-slider
+      .da-slide.da-slide-current
+        h2: i Race Clinic
+        h2 March 20 @ 6:30 PM <small> Rose City Yacht Club</small>
+        p: i
+          | SYSCO extends an invitation to all interested skippers and crew to
+          | attend this pre-race tune-up and race clinic. A Thursday evening
+          | chalkboard session will include updates for the 2014 OCSA Course
+          | Charts, discussions of basic rules, protests, and local racing
+          | conditions.
+        .da-img
+          img alt="" src="http://syscosailing.org/images/sos_2014.png" /
+      .da-slide
+        h2: i
+          | Race Clinic
+          small style="float: right; color: white; font-size: 0.45em; text-align: right; line-height: 16px;"
+            em style="float: right; color: #FFAF40; font-size: .6em; padding-top: 0px; font-style: normal; font-weight: bold; text-transform: none;"
+              | March 20 @ 6:30 PM
+            | <br> Rose City<br>Yacht Club
+        p: i
+          | SYSCO extends an invitation to all interested skippers and crew to
+          | attend this pre-race tune-up and race clinic. A Thursday evening
+          | chalkboard session will include updates for the 2014 OCSA Course
+          | Charts, discussions of basic rules, protests, and local racing
+          | conditions.
+        .da-img
+          img alt="" src="http://syscosailing.org/images/sos_2014.png" /
+      .da-slide
+        h2
+          i RESPONSIVE VIDEO
+          br
+            i SUPPORT AND
+            br
+              i MANY MORE
+        p
+          i Lorem ipsum dolor amet
+          br
+            i tempor incididunt ut
+        .da-img
+          iframe allowfullscreen="" frameborder="0" height="300" mozallowfullscreen="" src="http://player.vimeo.com/video/47911018" webkitallowfullscreen="" width="530"
+      .da-slide
+        h2
+          i USING BEST WEB
+          br
+            i SOLUTIONS WITH
+            br
+              i HTML5/CSS3
+        p
+          i Lorem ipsum dolor amet
+          br
+            i tempor incididunt ut
+            br
+              i veniam omnis
+        .da-img
+          img alt="image01" src="assets/plugins/parallax-slider/img/html5andcss3.png" /
+      .da-arrows
+        span.da-arrows-prev
+        span.da-arrows-next
+      nav.da-dots
+    /! /da-slider
+
+

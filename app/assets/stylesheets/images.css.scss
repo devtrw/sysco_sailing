@@ -1,0 +1,7 @@
+.cms-page-content img + p {
+  @extend .img-thumbnail;
+  &.pull-left {
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+}

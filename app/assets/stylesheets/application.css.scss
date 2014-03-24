@@ -9,14 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require style
- *= require app
- *= require header
- *= require footer
- *= require responsive
- *= require login_and_registration
- *= require color
- *= require_tree .
+ *= require font-awesome
+ *= require main
  */
-@import "bootstrap";
-@import "font-awesome";

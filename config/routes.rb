@@ -2,7 +2,7 @@ SyscoSailing::Application.routes.draw do
 
   comfy_route :cms_admin, :path => '/admin'
 
-  get '/membership' => 'high_voltage/pages#show', id: 'membership'
+  #get '/membership' => 'high_voltage/pages#show', id: 'membership'
   get '/privacy'    => 'high_voltage/pages#show', id: 'privacy'
   get '/terms'      => 'high_voltage/pages#show', id: 'terms'
 

@@ -1,3 +1,2 @@
-(($) ->
-
-) jQuery
+$ ->
+  $('#da-slider').cslider()

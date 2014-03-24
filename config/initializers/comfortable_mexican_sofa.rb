@@ -1,15 +1,17 @@
 # encoding: utf-8
 
+require File.join(Rails.root, "lib/cms_auth.rb")
+
 ComfortableMexicanSofa.configure do |config|
   # Title of the admin area
-  #   config.cms_title = 'ComfortableMexicanSofa CMS Engine'
+  config.cms_title = 'Sysco Sailing CMS Engine'
 
   # Controller that is inherited from CmsAdmin::BaseController
   #   config.base_controller = 'ApplicationController'
 
   # Module responsible for authentication. You can replace it with your own.
   # It simply needs to have #authenticate method. See http_auth.rb for reference.
-  #   config.admin_auth = 'ComfortableMexicanSofa::HttpAuth'
+  config.admin_auth = 'CmsAuth'
 
   # Module responsible for public authentication. Similar to the above. You also
   # will have access to @cms_site, @cms_layout, @cms_page so you can use them in
@@ -96,8 +98,8 @@ end
 
 # Default credentials for ComfortableMexicanSofa::HttpAuth
 # YOU REALLY WANT TO CHANGE THIS BEFORE PUTTING YOUR SITE LIVE
-ComfortableMexicanSofa::HttpAuth.username = 'username'
-ComfortableMexicanSofa::HttpAuth.password = 'password'
+#ComfortableMexicanSofa::HttpAuth.username = 'username'
+#ComfortableMexicanSofa::HttpAuth.password = 'password'
 
 # You can use bcrypt (gem 'bcrypt-ruby') if you want to:
 #   require 'bcrypt'
