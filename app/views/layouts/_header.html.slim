@@ -1,0 +1,47 @@
+div.top
+  div.container
+    ul.loginbar.pull-right
+      - if signed_in?
+        li
+          | Signed in as
+          =< current_user.email
+        li.divider
+        li
+          = link_to 'Logout', destroy_user_session_path
+      - else
+        li = link_to 'Sign In', new_session_path(User)
+div.header
+  div.navbar.navbar-default role="navigation"
+    div.container
+      div.navbar-header
+        button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-collapse"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to 'Small Yacht Sailing Club of Oregon', site_url, class: 'navbar-brand'
+      div.collapse.navbar-collapse.navbar-responsive-collapse
+        ul.nav.navbar-nav.navbar-right
+          li.active: a href="#" Home
+          li: a href="#about" About
+          li: a href="#contact" Contact
+          li.dropdown
+            a.dropdown-toggle href="#" data-toggle="dropdown"
+              | Dropdown
+              b.caret
+            ul.dropdown-menu
+              li: a href="#" Action
+              li: a href="#" Another action
+              li: a href="#" Something else here
+              li.divider
+              li.dropdown-header Nav header
+              li: a href="#" Separated link
+              li: a href="#" One more separated link
+
+div.breadcrumbs.margin-bottom-40
+  div.container
+    h1.pull-left = full_title(yield(:title))
+    ul.pull-right.breadcrumb
+      li: a href="#" Home
+      li: a href="#" Pages
+      li.active Login
