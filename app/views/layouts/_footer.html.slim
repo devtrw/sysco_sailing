@@ -1,0 +1,103 @@
+div.footer
+  div.container
+    div.row
+
+      div.col-md-3
+        p.margin-bottom-25.md-margin-bottom-40
+          = image_tag 'burgee.png'
+          br
+          em est. 1978 over 100 strong!
+          address
+            | PO Box 5502
+            br
+            | Portland OR 97228
+
+        p Subscribe to our newsletter and stay up to date with the latest news!
+        form.footer-subscribe
+          div.input-group
+            input.form-control type="text" placeholder="Email Address"
+            span.input-group-btn: button.btn-u type="button" Subscribe
+
+      div.col-md-3
+        div.headline: h2 Sailing Links
+        ul.list-unstyled.footer-links
+          li
+            a href="http://www.owsa.net" target="_blank" title="Oregon Women's Sailing Association" OWSA
+          li
+            a href="http://www.cal20pdx.net" target="_blank" title="Portland's Cal-20 Fleet"  Cal-20 Fleet 7
+          li
+            a href="http://www.fleet27.com" target="_blank" title="J24 fleet"  Fleet 27 J24
+          li
+            a href="http://martin24x.org/index_files/Page481.htm" target="_blank"  Martin 24X Fleet
+          li
+            a href="http://i550na.org/" target="_blank"  i550 North American Class
+          li
+            a href="http://www.wrh.noaa.gov/pqr/" target="_blank" title="National Weather Service Forecast Office - Portland, Oregon"  NW Weather
+          li
+            a href="http://www.sailflow.com" target="_blank" title="Sailflow Wind Forecast"  Sailflow
+          li
+            a href="http://www.sailpdx.org/racing/race-results" target="_blank" title="Race Results"  Race Results
+          li
+            a href="http://raceadmin.ussailing.org/Rules.htm" target="_blank" title="US Racing Rules"  US Racing Rules
+          li
+            a href="http://www.volvooceanrace.com/en/home.html" target="_blank"  Volvo Ocean Race
+          li
+            a href="http://www.americascup.com" target="_blank"  America's Cup
+
+      div.col-md-3
+        div.headline: h2 Site links
+        ul.list-unstyled.footer-links
+          li
+            a href="whoswho.php" title="Who's Who"
+              | Who's Who for 2014
+          li
+            a href="newsletters.php" title="Newsletters"
+              | Newsletters
+          li
+            a href="http://www.sailpdx.org/racing/event-notice-board/" title="Race Registration"
+              | Race Registration
+          li
+            a href="membership.php" title="Membership"
+              | Membership
+          li
+            a href="http://syscosailing.org/SYSCO_BYLAWS_Revised_Jan_24_2014.pdf" target="_blank"
+              | SYSCO Bylaws
+          li
+            a href="../race_clinic/2012s_Race_Clinic.pdf" target="_blank" title="SYSCO Race Clinic"
+              | SYSCO 2012 Race Clinic
+          li
+            a href="http://www.sailpdx.org/resources/crew-lists/local-crew-lists" target="_blank"
+              | Portland Crew List
+
+
+      div.col-md-3
+        div.headline: h2 Questions? Comments?
+
+        form
+
+          label.sr-only for="comment-form-name" Name
+          div.input-group
+            span.input-group-addon = fa_icon "user"
+            input.form-control id="comment-form-name" type="text" placeholder="Your Name"
+
+          label.sr-only for="comment-form-email" Email Address
+          div.input-group
+            span.input-group-addon = fa_icon "envelope"
+            input.form-control id="comment-form-email" type="text" placeholder="Email Address"
+
+          textarea.form-control id="comment-form-comment" rows="5"
+
+          button.btn.btn-primary.btn-block
+            => fa_icon "comment"
+            | Send
+div.copyright
+  div.container
+    div.row
+      div.col-md-6
+        p.copyright-space
+          | &copy; #{Time.now.year} #{full_site_name}
+          = link_to 'Privacy ', privacy_path
+          ' |
+          = link_to 'Terms & Conditions', terms_path
+      div.col-md-6
+        = link_to site_name, site_url, class: 'pull-right'

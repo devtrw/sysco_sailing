@@ -10,10 +10,13 @@
  *
  *= require_self
  *= require style
- *= require header1
+ *= require app
+ *= require header
+ *= require footer
  *= require responsive
- *= require blue
- *= require header1-blue
+ *= require login_and_registration
+ *= require color
  *= require_tree .
  */
 @import "bootstrap";
+@import "font-awesome";

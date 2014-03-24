@@ -21,6 +21,9 @@ gem 'compass-rails'
 # Twitter Bootstrap for base css/js
 gem 'bootstrap-sass'
 
+# Font Awesome support
+gem 'font-awesome-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -41,6 +44,9 @@ gem 'jbuilder'
 
 # Adds support for static pages
 gem 'high_voltage', '~> 2.1.0'
+
+# CMS Functionality
+gem 'comfortable_mexican_sofa', '~> 1.11.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

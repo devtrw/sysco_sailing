@@ -28,62 +28,19 @@ html lang="en"
 
   body role="document"
 
-    div.top
-      div.container
-        ul.loginbar.pull-right
-          - if user_signed_in?
-            li = link_to 'Logout', destroy_user_session_path
-          - else
-            li = link_to 'Sign In', new_session_path(User)
-    div.header
-      div.navbar.navbar-default role="navigation"
-        div.container
-          div.navbar-header
-            button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-collapse"
-              span.sr-only Toggle navigation
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            = link_to site_name, site_url, class: 'navbar-brand'
-          div.collapse.navbar-collapse.navbar-responsive-collapse
-            ul.nav.navbar-nav.navbar-right
-              li.active: a href="#" Home
-              li: a href="#about" About
-              li: a href="#contact" Contact
-              li.dropdown
-                a.dropdown-toggle href="#" data-toggle="dropdown"
-                  | Dropdown
-                  b.caret
-                ul.dropdown-menu
-                  li: a href="#" Action
-                  li: a href="#" Another action
-                  li: a href="#" Something else here
-                  li.divider
-                  li.dropdown-header Nav header
-                  li: a href="#" Separated link
-                  li: a href="#" One more separated link
+    = render 'layouts/header'
 
     div.container
       - unless notice.nil?
-        p.alert.alert-info.alert-dismissable.fade.in
+        p.alert.alert-info.alert-dismissible.fade.in
           button.close type="button" data-dismiss="alert" aria-hidden="true"
             | &times;
           = notice
       - unless alert.nil?
-        p.alert.alert-danger.alert-dismissable.fade.in
+        p.alert.alert-danger.alert-dismissible.fade.in
           button.close type="button" data-dismiss="alert" aria-hidden="true"
             | &times;
           = alert
-
       == yield
 
-      footer
-        p.pull-right: a href="#" Back to top
-
-        p
-          | &copy; #{Time.now.year} #{full_site_name}
-          ' &middot;
-          = link_to 'Privacy ', privacy_path
-          ' &middot;
-          = link_to 'Terms & Conditions', terms_path
-
+    = render 'layouts/footer'

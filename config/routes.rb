@@ -1,7 +1,10 @@
 SyscoSailing::Application.routes.draw do
 
-  get '/privacy' => 'high_voltage/pages#show', id: 'privacy'
-  get '/terms'   => 'high_voltage/pages#show', id: 'terms'
+  comfy_route :cms_admin, :path => '/admin'
+
+  get '/membership' => 'high_voltage/pages#show', id: 'membership'
+  get '/privacy'    => 'high_voltage/pages#show', id: 'privacy'
+  get '/terms'      => 'high_voltage/pages#show', id: 'terms'
 
   get '/home',  to: redirect('/')
   get '/index', to: redirect('/')
@@ -11,7 +14,7 @@ SyscoSailing::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  #root 'welcome#index'
 
 
   as :user do
@@ -69,4 +72,7 @@ SyscoSailing::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Make sure this routeset is defined last
+  comfy_route :cms, :path => '/', :sitemap => false
 end
